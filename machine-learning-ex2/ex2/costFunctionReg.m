@@ -24,10 +24,7 @@ J = (1/m) * sum( -y .* log(sigmoid(X * theta)) - (1 - y) .* log(1 - sigmoid(X * 
 % copy theta to another variable and make first value to be 0
 
 
-grad = (1/m) * (sigmoid(X * theta) .- y)' * X + ((lambda/m) .* thetacopy)';
-
-
-
+grad = (1/m) * (sigmoid(X * theta) - y)' * X + ((lambda/m) * thetacopy)';
 
 % =============================================================
 
